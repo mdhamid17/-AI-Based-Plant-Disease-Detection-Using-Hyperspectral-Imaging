@@ -1,29 +1,28 @@
-# AI-Powered Fake News Detection using NLP & Multi-Modal Learning
+# AI-Based Plant Disease Detection Using Hyperspectral Imaging
 
 ## Overview
-This project focuses on detecting **fake news** using **Natural Language Processing (NLP)** and **Multi-Modal AI** by analyzing both **textual content and accompanying images**. The goal is to combat misinformation by integrating **deep learning models** for news classification and image verification.
+This project focuses on **early detection of plant diseases** using **hyperspectral imaging** and **deep learning**. By analyzing spectral and visual features, the model aims to **identify diseases at an early stage**, improving precision agriculture and crop health monitoring.
 
 ## Features
-- **Fake News Classification**: Uses **BERT/RoBERTa/GPT models** to analyze and classify news articles.
-- **Multi-Modal Verification**: Implements **CLIP (Contrastive Language-Image Pretraining)** to cross-check images with their captions.
-- **Fact-Checking API Integration**: Compares claims with **Google Fact Check API, Politifact, and Snopes** for authenticity.
-- **Explainability (XAI)**: Uses **SHAP/LIME** to explain why an article is classified as fake.
-- **Real-Time Browser Extension**: Highlights fake news in real-time with a **Chrome extension**.
+- **Multi-Spectral Image Analysis**: Leverages hyperspectral imaging to detect diseases beyond visible spectrum analysis.
+- **Deep Learning Model**: Implements **CNN-based models (ResNet, EfficientNet) or Vision Transformers (ViTs)** for disease classification.
+- **Custom Dataset Processing**: Works with **public datasets (PlantVillage, PhenoBench)** or hyperspectral datasets from research sources.
+- **Explainability (XAI)**: Uses **Grad-CAM** to visualize AI decision-making for interpretability.
+- **Edge AI Deployment**: Optimized for **Jetson Nano, Raspberry Pi**, enabling real-time field analysis.
 
 ## Technologies Used
 - **Python**
-- **Hugging Face Transformers (BERT, RoBERTa, GPT)**
 - **TensorFlow / PyTorch**
-- **CLIP (for Image Verification)**
-- **Google Fact Check API**
-- **SHAP/LIME for Explainability**
-- **Flask/FastAPI (for deployment)**
+- **OpenCV**
+- **Hyperspectral Imaging Techniques**
+- **Grad-CAM for Explainability**
+- **Machine Learning Frameworks (Sci-Kit Learn, Pandas, NumPy)**
 
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Fake-News-Detection.git
-cd Fake-News-Detection
+git clone https://github.com/yourusername/Plant-Disease-Detection.git
+cd Plant-Disease-Detection
 
 # Install dependencies
 pip install -r requirements.txt
@@ -31,24 +30,24 @@ pip install -r requirements.txt
 
 ## Usage
 ```python
-python detect_fake_news.py --input "path_to_news_article" --output results.json
+python detect_disease.py --input path_to_plant_image --output results.json
 ```
 
 ## Dataset
-- **LIAR Dataset**: A labeled dataset for fake news detection.
-- **FakeNewsNet**: A dataset containing textual and visual fake news samples.
-- **Custom Data Collection**: Scraped real-time misinformation from news sources.
+- **PlantVillage**: Large-scale dataset with labeled healthy and diseased plant images.
+- **PhenoBench**: Hyperspectral imaging dataset for plant phenotyping and disease detection.
+- **Custom Data Collection**: Can be extended with real-world hyperspectral plant images.
 
 ## Results (Undergoing)
-| Real News | Fake News |
-|-----------|----------|
-| ![Real](images/real_news.jpg) | ![Fake](images/fake_news.jpg) |
+| Healthy Leaf | Diseased Leaf |
+|-------------|--------------|
+| ![Healthy](images/healthy.jpg) | ![Diseased](images/diseased.jpg) |
 
 ## Future Work
-- Improve **fact-checking accuracy** with **knowledge graphs**.
-- Enhance **generalization across multiple languages**.
-- Develop **mobile applications for real-time misinformation detection**.
-- Publish findings in **ACL, EMNLP, or AI Ethics conferences**.
+- Enhance **multi-modal learning** by combining **RGB, thermal, and hyperspectral data**.
+- Improve **generalization across different crop species**.
+- Develop **mobile applications for real-time field use**.
+- Publish findings in **CVPR, ICCV, or AgriAI conferences**.
 
 ## Contributing
 Feel free to contribute by submitting **pull requests** or opening **issues**.
